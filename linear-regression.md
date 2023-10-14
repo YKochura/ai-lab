@@ -21,7 +21,7 @@ count: false
 
 class: middle 
 
-1. .bold[Збір датасету]
+1. .bold[Датасет]
 1. .bold[Створення алгоритму машинного навчання] (лінійна регресія, логістична регресія, машина опорних векторів, нейронна мережа, ... )
 1. .bold[Ініціалізація параметрів]
 1. .bold[Вибір функції втрат та оптимізаційного алгоритму]
@@ -41,9 +41,37 @@ class: middle
 class: blue-slide, middle, center
 count: false
 
-.larger-xx[Збір датасету]
+.larger-xx[Датасет]
 
-Регресія
+---
+
+class: middle, center
+# Датасет
+
+.width-90[![](figures/regression/dataset-50.png)]
+
+---
+
+class: middle, center
+# Навчальна вибірка
+
+.width-90[![](figures/regression/train-37.png)]
+
+---
+
+class: middle, center
+# Тестова (валідаційна) вибірка
+
+.width-90[![](figures/regression/test-13.png)]
+
+---
+
+class: blue-slide, middle, center
+count: false
+
+.larger-xx[Алгоритм машинного навчання]
+
+Лінійна регресія
 
 ---
 
@@ -63,11 +91,84 @@ Ex: Прогнозування цін на будинки для продажу 
 
 ---
 
+class: middle, center
+
+# Лінійна регресія
+
+.larger-x[$$\hat y =  \sum_{i=1}^m w_i x_i  + b$$]
+
+.grid[
+.kol-1-2[
+.center.width-110[![](figures/regression/lregression.png)]
+]
+
+.kol-1-2[
+.center.width-90[![](figures/regression/train-37.png)]
+]
+]
+
+---
 
 class: blue-slide, middle, center
 count: false
 
-.larger-xx[Одновимірний градієнтний спуск]
+.larger-xx[Ініціалізація параметрів]
+
+---
+
+class:  middle,
+
+.center[Щоб почати процес навчання, потрібно ініціалізувати параметри моделі: 
+
+ваги $ W$ та зсув $b$]
+
+.larger-x[$$\hat y =  \sum_{i=1}^m w_i x_i  + b$$]
+
+.larger-x[$$\hat y =  W \cdot X + b$$]
+
+Ініціалізація може мати значний вплив на збіжність оптимізаційного алгоритму при навчанні моделі. Прості схеми ініціалізації можуть прискорити навчання, але вони вимагають певної обережності, щоб уникнути типових пасток (зникнення, вибух градієнтів, тощо)
+
+---
+
+
+class: blue-slide, middle, center
+count: false
+
+.larger-xx[Функція втрат]
+
+---
+
+class: middle
+
+Функція втрат:
+$$\mathcal{L^{(i)}}  = \Big(\hat{y}^{(i)} -  y^{(i)} \Big)^2$$ 
+
+
+Цільова функція:
+$$\begin{aligned}\mathcal{J}(\hat y,y)   &= \frac{1}{n} \sum\_{i=1}^n \mathcal{L^{(i)}} =\\\\
+&= \frac{1}{n} \sum\_{i=1}^n \Big(\hat{y}^{(i)} -  y^{(i)} \Big)^2 = \\\\
+&= \frac{1}{n} \sum\_{i=1}^n \Big(\Big(W \cdot X^{(i)} + b\Big) -   y^{(i)} \Big)^2 \end{aligned}$$ 
+
+де $n$ &mdash; загальна кількість навчальних прикладів. 
+
+---
+
+class: middle
+
+$$\mathcal{L^{(i)}}  = \Big(\hat{y}^{(i)} -  y^{(i)} \Big)^2$$ 
+
+.center[
+.width-80[![](figures/regression/train-error.png)]
+]
+
+---
+
+class: blue-slide, middle, center
+count: false
+
+.larger-xx[Оптимізаційний алгоритм]
+
+Одновимірний градієнтний спуск
 
 ---
 
@@ -156,7 +257,7 @@ lass: middle
 ---
 
 class: middle
-# Загальний випадок
+# Градієнт
 .larger-x[
 $$
 \nabla f(\left.x\_{1}, x\_{2}, \ldots, x\_{n}\right)=\left[\begin{aligned}\begin{array}{c}\dfrac{\partial f}{\partial x\_1}(\left.x\_{1}, x\_{2}, \ldots, x\_{n}\right)\\\\[18pt]
@@ -169,6 +270,45 @@ $$
 
 ---
 
+
+class: middle
+
+$$\begin{aligned}\hat y &= W \cdot X + b \\\\
+J(\hat y,y)  &= \frac{1}{n} \sum_{i=1}^n \Big(\hat{y}^{(i)} -  y^{(i)} \Big)^2
+\end{aligned}$$
+
+$$\boxed{\begin{aligned}
+\frac{\partial J(\hat y, y)}{\partial \hat y} &= \frac{2}{n} \sum\_{i=1}^n \Big(\hat{y}^{(i)} -  y^{(i)} \Big)   \\\\[12pt]
+\frac{\partial J(\hat y, y)}{\partial W } = \frac{\partial J(\hat y, y)}{\partial \hat y} \frac{\partial \hat y}{\partial W }  &= \frac{2}{n} \sum\_{i=1}^n \Big(\hat{y}^{(i)} -  y^{(i)} \Big) X^{(i)}   \\\\[12pt]
+\frac{\partial J(\hat y, y)}{\partial b} =  \frac{\partial J(\hat y, y)}{\partial \hat y} \frac{\partial \hat y}{\partial b }&=  \frac{2}{n} \sum\_{i=1}^n \Big(\hat{y}^{(i)} -  y^{(i)} \Big)
+\end{aligned}}$$
+
+.larger-x[
+$$
+\begin{aligned}
+\nabla J(\left.W, b\right) =  \left[\begin{array}{c}\dfrac{\partial J}{\partial W}\\\\[18pt]
+\dfrac{\partial J}{\partial b}
+\end{array}\right] 
+&=  \left[\begin{array}{c}\frac{2}{n} \sum\_{i=1}^n \Big(\hat{y}^{(i)} -  y^{(i)} \Big) X^{(i)} \\\\[18pt]
+\frac{2}{n} \sum\_{i=1}^n \Big(\hat{y}^{(i)} -  y^{(i)} \Big) 
+\end{array}\right]
+\end{aligned}
+$$
+]
+
+---
+
+class: middle
+
+# Оновити ваги та зсув моделі
+.larger-xx[
+$$\begin{aligned}
+W &= W - \alpha \frac{\partial J}{\partial W} \\\\[15pt]
+b &= b - \alpha \frac{\partial J}{\partial b}
+\end{aligned}$$
+]
+
+---
 
 class: end-slide, center
 count: false
