@@ -1,8 +1,8 @@
 class: middle, center, title-slide 
 
-# Системи штучного інтелекту
+# Програмування систем <br> штучного інтелекту
 
-Осінь 2023 р.
+Осінь 2024 р.
 
 <br><br>
 Кочура Юрій Петрович<br>
@@ -93,7 +93,7 @@ class: middle
 # Заняття з практик
 
 - Практики в асинхронному режимі онлайн 
-- Семінар в синхронному режимі онлайн на платформі .bold[*BigBlueButton*]:<br>  [https://bbb.comsys.kpi.ua/b/yur-epq-or2-crj](https://bbb.comsys.kpi.ua/b/yur-epq-or2-crj)
+- Захист проєкту в синхронному режимі онлайн на платформі .bold[*BigBlueButton*]:  [https://bbb.ugrid.org/b/yur-nm0-xl8-o2t](https://bbb.ugrid.org/b/yur-nm0-xl8-o2t)
 
 .center.width-100[![](figures/course-details/bbb.png)]
 
@@ -111,13 +111,13 @@ class: middle
 
 .grid[
 .kol-1-2[
-.center.width-60[![](figures/course-details/telegram-с.png)]
+.center.width-90[![](figures/course-details/telegram-с.png)]
 .center.smaller-x[Оголошення]
 ]
 
 .kol-1-2[
-.center.width-60[![](figures/course-details/telegram.png)]
-.center.smaller-x[Обговорення]
+.center.width-90[![](figures/course-details/telegram.png)]
+.center.smaller-x[Оголошення & Обговорення]
 ]
 ]
 
@@ -131,13 +131,14 @@ class: middle
  Для всеосяжного ознайомлення з ШІ:
 
 .grid[
+
 .kol-1-3[
-[.center.width-80[![](figures/course-details/deep-learning-book-goodfellow-cover.jpg)]](https://www.deeplearningbook.org/)
+[.center.width-95[![](figures/course-details/dml2.png)]](https://drive.google.com/file/d/130ruX0CGGNtX1E39Y622Bu_CThHjb9nc/view?usp=sharing)
 .center[Безкоштовна]
 ]
 
 .kol-1-3[
-[.center.width-95[![](figures/course-details/Neural-Networks-and-Deep-Learning.png)]](http://neuralnetworksanddeeplearning.com/index.html)
+[.center.width-80[![](figures/course-details/deep-learning-book-goodfellow-cover.jpg)]](https://www.deeplearningbook.org/)
 .center[Безкоштовна]
 ]
 
@@ -162,11 +163,11 @@ class: middle
 
 # Оцінювання
 
-- 30%  &nbsp;&emsp; Практичнi завдання (10% кожне)
-- 30%  &nbsp;&emsp; Семінар
+- 30 балів  &nbsp;&emsp; Практичнi завдання (10 балів кожне)
+- 30 балів  &nbsp;&emsp; Проєкт
 
 **Примітка!** Умова допуску до семестрового контролю:<br>
- .center[*Практичні + Семінар* $\geq 36\%$]
+ .center[*Практичні + Семінар* $\geq 36$ *бали*]
 
 ---
 
@@ -217,7 +218,7 @@ class: middle
 
 class: middle 
 
-# Виконання завдань: практики та семінар
+# Виконання завдань: практики та проєкт
 
 Викладачем встановлюється граничний термін для виконання усіх видів завдань з метою послідовного і збалансованого засвоєння студентами навчального матеріалу та моніторингу виконання здобувачами індивідуальних навчальних планів згідно з графіком навчального процесу. Здача на перевірку виконаних завдань після встановлених термінів
 супроводжується штрафними балами. Кінцевим терміном для здачі на перевірку усіх видів завдань є останнє заняття з комп’ютерного практикуму. У період проведення в університеті
@@ -242,7 +243,7 @@ count: false
 .larger-xx[Як успішно завершити курс?]
 
 ???
-Викладач зацікавлений у тому, щоб усі досягли успіху під час вивчення дисципліни та дізналися якомога більше не лише про “зміст предмету”, а й про те, як ми можемо покращити світ навколо нас. 
+Викладач зацікавлений у тому, щоб усі досягли успіху під час вивчення дисципліни та дізналися якомога більше не лише про “зміст предмету”, а й про те, як ми можемо покращити світ навколо нас за допомогою розглянутих технологій.. 
 
 ---
 
