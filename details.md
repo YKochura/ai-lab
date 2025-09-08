@@ -1,8 +1,8 @@
 class: middle, center, title-slide 
 
-# Програмування систем <br> штучного інтелекту
+# Cистеми штучного інтелекту
 
-Осінь 2024 р.
+Осінь 2025 р.
 
 <br><br>
 Кочура Юрій Петрович<br>
@@ -16,13 +16,14 @@ class: middle
 
 # Викладач з практик
 
-.center[
-.circle.width-40[![](figures/course-details/ykochura.jpg)]
-]
+.grid[
+.kol-1-1[ 
+.circle.center.width-40[![](./figures/course-details/ykochura.jpg)]
+.bold.center[👤 Кочура Юрій Петрович ] 
+<span style="display:block; margin:10px 0;"></span>
+.bold.center[🏢 Кафедра ОТ, ФІОТ]
 
-
-.center.bold.larger-x[Кочура Юрій Петрович]
-- Кафедра обчислювальної техніки, ФІОТ
+]]
 
 ---
 
@@ -109,17 +110,10 @@ class: middle
 - Не соромтесь!
 ]
 
-.grid[
-.kol-1-2[
-.center.width-90[![](figures/course-details/telegram-с.png)]
-.center.smaller-x[Оголошення]
-]
 
-.kol-1-2[
-.center.width-90[![](figures/course-details/telegram.png)]
-.center.smaller-x[Оголошення & Обговорення]
-]
-]
+.center.width-40[![](figures/course-details/telegram.png)]
+.center.smaller-x[Оголошення + Обговорення]
+
 
 ---
 
@@ -133,9 +127,9 @@ class: middle
 .grid[
 
 .kol-1-3[
-[.center.width-95[![](figures/course-details/dml2.png)]](https://drive.google.com/file/d/130ruX0CGGNtX1E39Y622Bu_CThHjb9nc/view?usp=sharing)
-.center[Безкоштовна]
-]
+[.center.width-85[![](figures/course-details/dml.png)]](https://github.com/dml-book/dml/releases/download/v0.1.10/0.1.10-final.pdf)
+.center[Безкоштовно]
+  ]
 
 .kol-1-3[
 [.center.width-80[![](figures/course-details/deep-learning-book-goodfellow-cover.jpg)]](https://www.deeplearningbook.org/)
@@ -163,11 +157,11 @@ class: middle
 
 # Оцінювання
 
-- 30 балів  &nbsp;&emsp; Практичнi завдання (10 балів кожне)
-- 30 балів  &nbsp;&emsp; Проєкт
+- 40 балів  &nbsp;&emsp; Практичнi завдання (10 балів кожне)
+- 20 балів  &nbsp;&emsp; Семінар
 
 **Примітка!** Умова допуску до семестрового контролю:<br>
- .center[*Практичні + Проєкт* $\geq 36$ *бали*]
+ .center[*Практичні + Семінар* $\geq 36$ *бали*]
 
 ---
 
