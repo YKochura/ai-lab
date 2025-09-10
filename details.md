@@ -1,6 +1,6 @@
 class: middle, center, title-slide 
 
-# Cистеми штучного інтелекту
+# Системи штучного інтелекту
 
 Осінь 2025 р.
 
@@ -14,14 +14,23 @@ class: middle, center, title-slide
 
 class: middle
 
-# Викладач з практик
+# Викладачі
 
 .grid[
-.kol-1-1[ 
-.circle.center.width-40[![](./figures/course-details/ykochura.jpg)]
-.bold.center[👤 Кочура Юрій Петрович ] 
+.kol-1-2[ 
+.bold.larger-x.center[Лекції] <br>
+.circle.center.width-60[![](./figures/course-details/sstirenko.jpg)]
+.bold.smaller-x.center[👤 Стіренко Сергій Григорович ] 
 <span style="display:block; margin:10px 0;"></span>
-.bold.center[🏢 Кафедра ОТ, ФІОТ]
+.bold.smaller-x.center[🏢 Кафедра ОТ, ФІОТ]
+
+]
+.kol-1-2[
+.bold.larger-x.center[Практики] <br> 
+.circle.center.width-60[![](./figures/course-details/ykochura.jpg)]
+.bold.smaller-x.center[👤 Кочура Юрій Петрович ] 
+<span style="display:block; margin:10px 0;"></span>
+.bold.smaller-x.center[🏢 Кафедра ОТ, ФІОТ]
 
 ]]
 
@@ -94,7 +103,7 @@ class: middle
 # Заняття з практик
 
 - Практики в асинхронному режимі онлайн 
-- Захист проєкту в синхронному режимі онлайн на платформі .bold[*BigBlueButton*]:  [https://bbb.ugrid.org/b/yur-nm0-xl8-o2t](https://bbb.ugrid.org/b/yur-nm0-xl8-o2t)
+- Семінар в синхронному режимі онлайн на платформі .bold[*BigBlueButton*]:  [https://bbb.ugrid.org/b/yur-nm0-xl8-o2t](https://bbb.ugrid.org/b/yur-nm0-xl8-o2t)
 
 .center.width-100[![](figures/course-details/bbb.png)]
 
