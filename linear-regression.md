@@ -15,12 +15,16 @@ class: middle, center, title-slide
 class: blue-slide, middle, center
 count: false
 
-.larger-xx[Пайплайн]
+.larger-xx[Робочий процес]
 
 ---
 
-class: middle 
+class: middle
 
+background-image: url(figures/regression/pl.png)
+background-size: contain
+
+???
 1. .bold[Датасет]
 1. .bold[Створення алгоритму машинного навчання] (лінійна регресія, логістична регресія, машина опорних векторів, нейронна мережа, ... )
 1. .bold[Ініціалізація параметрів]
@@ -34,9 +38,10 @@ class: middle
 
   5.3. Обчислити градієнти цільової функції відносно навчальних параметрів використовуючи правило ланцюжка
 
-  5.4. Оновити навчальні параметри відповідно до правила оптимізаційного алгоритму]  
+  5.4. Оновити навчальні параметри відповідно до правила оптимізаційного алгоритму]
 
 ---
+
 
 class: blue-slide, middle, center
 count: false
@@ -47,20 +52,27 @@ count: false
 
 class: middle, center
 # Датасет
+.smaller-x[ $D = \{(X^{(i)}, y^{(i)})\}\_{i=1}^{50}$,
+де $X^{(i)}$ та $y^{(i)}$ &mdash; відповідні значення ознак та міток для $i$-го екземпляра.]
 
-.width-90[![](figures/regression/dataset-50.png)]
+.width-85[![](figures/regression/dataset-50.png)]
 
 ---
 
 class: middle, center
 # Навчальна вибірка
+.smaller-x[ $D\_{train} \subset D, \quad$ 
+$|D\_{train}| = 0.74 \cdot |D| = 37$ приклади.]
 
-.width-90[![](figures/regression/train-37.png)]
+.width-85[![](figures/regression/train-37.png)]
 
 ---
 
 class: middle, center
 # Тестова (валідаційна) вибірка
+
+.smaller-x[ $D\_{test} \subset D, \quad$ 
+$|D\_{test}| = 0.26 \cdot |D| = 13$ приклади.]
 
 .width-90[![](figures/regression/test-13.png)]
 
@@ -82,7 +94,7 @@ class: middle, center
 
 Регресія спрямована на визначення зв’язків між (зазвичай неперервними) змінними.
 
-Приклад: [Прогнозування цін на житло](https://towardsdatascience.com/predicting-house-prices-with-linear-regression-machine-learning-from-scratch-part-ii-47a0238aeac1)
+.larger-xx[🏡] Приклад: [Прогнозування цін на житло](https://www.kaggle.com/code/cheesu/house-prices-1st-approach-to-data-science-process)
 
 ???
 Регресійна модель визначає зв’язок між незалежною змінною та залежною змінною за допомогою функції. Формулювання регресійного аналізу допомагає передбачити вплив незалежної змінної на залежну.
@@ -91,11 +103,13 @@ Ex: Прогнозування цін на будинки для продажу 
 
 ---
 
-class: middle, center
+class: middle, 
 
 # Лінійна регресія
 
-.larger-x[$$\hat y =  \sum_{i=1}^m w_i x_i  + b$$]
+.center.larger-x[$$\hat y =  \sum_{n=1}^m w\_n x\_n  + b$$]
+
+У загальному випадку кожен приклад з датасету $X^{(i)}$ &mdash; багатовимірний вектор ознак: $X^{(i)} = (x\_1^{(i)}, x\_2^{(i)}, ..., x\_m^{(i)}) \in \mathbb{R}^m$
 
 .grid[
 .kol-1-2[
@@ -122,7 +136,7 @@ class:  middle,
 
 ваги $ W$ та зсув $b$]
 
-.larger-x[$$\hat y =  \sum_{i=1}^m w_i x_i  + b$$]
+.larger-x[$$\hat y =  \sum_{n=1}^m w_n x_n  + b$$]
 
 .larger-x[$$\hat y =  W \cdot X + b$$]
 
@@ -260,10 +274,10 @@ class: middle
 # Градієнт
 .larger-x[
 $$
-\nabla f(\left.x\_{1}, x\_{2}, \ldots, x\_{n}\right)=\left[\begin{aligned}\begin{array}{c}\dfrac{\partial f}{\partial x\_1}(\left.x\_{1}, x\_{2}, \ldots, x\_{n}\right)\\\\[18pt]
-\dfrac{\partial f}{\partial x\_2}(\left.x\_{1}, x\_{2}, \ldots, x\_{n}\right)\\\\[18pt]
+\nabla f(\left.x\_{1}, x\_{2}, \ldots, x\_{m}\right)=\left[\begin{aligned}\begin{array}{c}\dfrac{\partial f}{\partial x\_1}(\left.x\_{1}, x\_{2}, \ldots, x\_{m}\right)\\\\[18pt]
+\dfrac{\partial f}{\partial x\_2}(\left.x\_{1}, x\_{2}, \ldots, x\_{m}\right)\\\\[18pt]
 \vdots \\\\
-\dfrac{\partial f}{\partial x\_n}(\left.x\_{1}, x\_{2}, \ldots, x\_{n}\right)
+\dfrac{\partial f}{\partial x\_m}(\left.x\_{1}, x\_{2}, \ldots, x\_{m}\right)
 \end{array}\end{aligned}\right]
 $$
 ]
@@ -313,4 +327,4 @@ b &= b - \alpha \frac{\partial J}{\partial b}
 class: end-slide, center
 count: false
 
-.larger-xx[Кінець] 
+.larger-xxxx[🏁]
