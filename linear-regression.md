@@ -62,7 +62,7 @@ class: middle, center
 class: middle, center
 # Навчальна вибірка
 .smaller-x[ $D\_{train} \subset D, \quad$ 
-$|D\_{train}| = 0.74 \cdot |D| = 37$ приклади.]
+$|D\_{train}| = 0.74 \cdot |D| = 37$ прикладів.]
 
 .width-85[![](figures/regression/train-37.png)]
 
@@ -72,7 +72,7 @@ class: middle, center
 # Тестова (валідаційна) вибірка
 
 .smaller-x[ $D\_{test} \subset D, \quad$ 
-$|D\_{test}| = 0.26 \cdot |D| = 13$ приклади.]
+$|D\_{test}| = 0.26 \cdot |D| = 13$ прикладів.]
 
 .width-90[![](figures/regression/test-13.png)]
 
