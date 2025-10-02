@@ -107,7 +107,7 @@ class: middle,
 
 # Лінійна регресія
 
-.center.larger-x[$$\hat y =  \sum_{n=1}^m w\_n x\_n  + b$$]
+.center.larger-x[$$\hat y =  \sum_{k=1}^m w\_k x\_k  + b$$]
 
 У загальному випадку кожен приклад з датасету $X^{(i)}$ &mdash; багатовимірний вектор ознак: $X^{(i)} = (x\_1^{(i)}, x\_2^{(i)}, ..., x\_m^{(i)}) \in \mathbb{R}^m$
 
