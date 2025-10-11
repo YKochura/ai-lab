@@ -1,0 +1,21 @@
+name: Update NBViewer Links Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update_links:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Update NBViewer Links
+      uses: KensingtonOscupant/nbviewer-flush-cache-action@v1.0.4
+      with:
+        file_path: 'README.md'  # або інший файл із NBViewer-посиланнями
+        commit_email: 'your_email@example.com'
+        commit_username: 'YourUsername'
